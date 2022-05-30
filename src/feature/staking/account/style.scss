@@ -1,0 +1,138 @@
+@import 'assets/scss/valuable';
+@import 'assets/scss/responsive';
+
+#staking {
+  .box-staking {
+    display: flex;
+    width: 1075px;
+    margin: 32px auto 0;
+    .item {
+      padding: 24px;
+      border-radius: 16px;
+      background-color: rgba(18, 18, 18, 0.1);
+      border: 2px solid #eb8825;
+      margin-left: 25px;
+      margin-top: 16px;
+      width: 100%;
+      min-width: 400px;
+      max-width: 575px;
+      h1 {
+        font-size: 38px;
+        line-height: 30px;
+        vertical-align: middle;
+        font-weight: 700;
+      }
+      .info {
+        margin: 42px 0;
+        color: $blue-color;
+        display: flex;
+        &-item {
+          flex-basis: 50%;
+          font-size: 12px;
+          .title {
+            line-height: 26px;
+          }
+          .coin span {
+            font-size: 24px;
+            padding-right: 8px;
+          }
+        }
+      }
+      .button {
+        background: url('/assets/img/button4.png') no-repeat center / 100% 100%;
+        margin-top: 8px;
+        height: 45px;
+        position: relative;
+        button {
+          height: 100%;
+          width: 100%;
+          color: rgba(136, 157, 182, 0.7);
+          background-color: transparent;
+          border: none;
+          outline: none;
+          font-size: 14px;
+          text-shadow: 1px 1px 2px #000;
+        }
+      }
+      .button.active {
+        background: url('/assets/img/button4-active.png') no-repeat center /
+          100% 100%;
+        opacity: 1;
+      }
+      .coin {
+        margin: 20px 0;
+        color: $blue-color;
+        span {
+          font-size: 24px;
+          padding-right: 8px;
+        }
+      }
+    }
+    .left {
+      .wrapper-custom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .claim-button {
+        width: 110px;
+        height: 36px;
+        background: url('/assets/img/button5.png') no-repeat center / 100% 100%;
+        button {
+          height: 100%;
+          width: 100%;
+          color: #fff;
+          background-color: transparent;
+          border: none;
+          outline: none;
+          font-size: 14px;
+          text-shadow: 1px 1px 2px #000;
+        }
+      }
+    }
+    .right {
+      width: 450px;
+      position: relative;
+      > svg {
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        fill: #00abd7;
+        filter: drop-shadow(0 0 2px #00abd7);
+      }
+      .rank-box {
+        color: $blue-color;
+        margin: 20px 0;
+        display: flex;
+        > span {
+          display: block;
+          flex-basis: 50%;
+          font-size: 14px;
+          > span {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+  @include media('screen', '<laptop') {
+    .box-staking {
+      flex-direction: column;
+      width: 100%;
+      margin-top: 0;
+      .item {
+        min-width: unset;
+        max-width: unset;
+        margin-right: 25px;
+        width: calc(100% - 50px);
+        .wrapper-custom {
+          flex-direction: column;
+          .content {
+            align-self: flex-start;
+          }
+        }
+      }
+    }
+  }
+}

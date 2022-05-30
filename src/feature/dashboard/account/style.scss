@@ -1,0 +1,126 @@
+@import 'assets/scss/valuable';
+@import 'assets/scss/responsive';
+
+#dashboard {
+  color: $white-color;
+  margin-bottom: 40px;
+  h3 {
+    font-weight: 700;
+    font-size: 26px;
+    margin: 20px 0 8px;
+    font-weight: 700;
+  }
+  
+  h3:not(:first-child){
+    margin-top: 50px;
+  }
+  .content {
+    background-color: rgba(101, 37, 26, 0.22);
+    border-radius: 5px;
+    border: 2px solid #eb8825;
+    padding: 8px 12px;
+
+    &-wrap{
+      margin: auto;
+      width: 60%;
+    }
+    .item {
+      margin-bottom: 16px;
+      font-size: 16px;
+      display: flex;
+      justify-content: space-between;
+
+      &:first-child{
+        margin-top: 16px;
+      }
+
+      &-content{
+        display: flex;
+        font-weight: 700;
+        
+        .unit{
+          display: flex;
+          min-width: 40px;
+        }
+      }
+
+      label {
+        width: 200px;
+        color: #bbbdbf;
+        font-size: 18px;
+        font-weight: 800;
+      }
+      span {
+        margin-left: 8px;
+      }
+      .unit {
+        flex-basis: 30px;
+      }
+    }
+    .item2 {
+      width: 100%;
+      margin-bottom: 16px;
+      font-size: 18px;
+      background-color: #59070bc9;
+      border: 2px solid #eb8825;
+      border-radius: 10px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 8px 20px;
+      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+      user-select: none;
+      label {
+        color: #bbbdbf;
+        cursor: pointer;
+      }
+      
+      .btn-copy{
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        transition: all 0.5s ease-in-out;
+        svg {
+          fill: $white-color;
+          transition: all 0.5s ease-in-out;
+        }
+
+        &:hover{
+          cursor: pointer;
+          svg{
+            transform: scale(1.2);
+            fill: #EBC126;
+          }
+        }
+      }
+    }
+  }
+  .content.overview {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    .item {
+      margin: 8px 0;
+      font-size: 30px;
+      font-weight: 700;
+      
+      label {
+        color: $white-color;
+      }
+
+      img{
+        height: 50px;
+        width: auto;
+      }
+    }
+  }
+
+  @include media('screen', '<laptop') {
+    .hd-items{
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+}
